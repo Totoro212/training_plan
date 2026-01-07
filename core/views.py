@@ -1,9 +1,9 @@
-from django.shortcuts import get_object_or_404
-from django.views.generic import TemplateView, DetailView
-from django.http import HttpResponse
-from django.template.response import TemplateResponse
-from .models import TrainingDay, Exercise,DayExercise
-from django.db.models import Q
+import datetime
+from django.shortcuts import render
+from core.models import Exercise, DayExercise
 
-class IndexView(TemplateView):
-    template_name = 'main/base.html'
+
+def index(request):
+    today = datetime.date.today().weekday()
+    day_exercises = DayExercise.objects.filter(weekday=today)
+    return render(request, 'index.html', {'day_exercises': day_exercises, 'today': today})

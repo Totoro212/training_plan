@@ -1,0 +1,27 @@
+/* style.css */
+
+.day-exercises {
+    list-style: none; /* убираем стандартные буллеты */
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-family: 'Arial', sans-serif;
+}
+
+.day-exercises li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    color: #222;
+}
+
+.day-exercises li:hover {
+    background-color: #eaeaea;
+    cursor: default;
+    transition: 0.2s;
+}

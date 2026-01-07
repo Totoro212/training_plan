@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <ul class='day-exercises'>
+        {%if day_exercises%}
+        {%for e in day_exercises%}
+            <li>{{e}}</li>
+        {% endfor %}
+        {%else%}
+            <li>Сегодня нету тренировок</li>
+        {%endif%}
+    </ul>
+{% endblock %}
