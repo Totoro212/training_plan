@@ -44,7 +44,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
 
-    'core'
+    'core',
+    'users'
+    
+    'crispy_forms',
+    'crispy_bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +81,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
